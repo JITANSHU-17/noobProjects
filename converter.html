@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <style>
+    body
+    {
+      background-image: url('images/bgg1.jpg');
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unit Converter</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="BMI.html">BMI</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="converter">
+      <h2>Convert Meters to Feet</h2>
+      <input type="number" id="meters" placeholder="Enter meters" />
+      <button onclick="convert1()">Convert</button>
+      <button onclick="clearFields()">Clear</button>
+      <p id="result1">Result: </p>
+
+      <h2>Convert Feet to Meters</h2>
+      <input type="number" id="feet" placeholder="Enter feet" />
+      <button onclick="convert2()">Convert</button>
+      <button onclick="clearFields()">Clear</button>
+      <p id="result2">Result: </p>
+
+      <h2>Convert Kilograms to Pounds</h2>
+      <input type="number" id="kg" placeholder="Enter kilograms" />
+      <button onclick="convert3()">Convert</button>
+      <button onclick="clearFields()">Clear</button>
+      <p id="result3">Result: </p>
+    
+      <h2>Convert Celcius to Fahrenheit</h2>
+      <input type="number" id="celcius" placeholder="Enter celcius" />
+      <button onclick="convert5()">Convert</button>
+      <button onclick="clearFields()">Clear</button>
+      <p id="result5">Result: </p>
+  
+      <h2>Convert Fahrenheit to Celcius</h2>
+      <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit" />
+      <button onclick="convert6()">Convert</button>
+      <button onclick="clearFields()">Clear</button>
+      <p id="result6">Result: </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Utility Website</p>
+  </footer>
+
+  <script>
+     function clearFields() {
+        document.getElementById('meters').value = '';
+        document.getElementById('feet').value = '';
+        document.getElementById('kg').value = '';
+        document.getElementById('celcius').value = '';
+        document.getElementById('fahrenheit').value = '';
+        document.getElementById('result1').value = '';
+        document.getElementById('result2').value = '';
+        document.getElementById('result3').value = '';
+        document.getElementById('result5').value = '';
+        document.getElementById('result6').value = '';
+        document.getElementById('meters').textContent = '';
+        document.getElementById('feet').textContent = '';
+        document.getElementById('kg').textContent = '';
+        document.getElementById('celcius').textContent = '';
+        document.getElementById('fahrenheit').textContent = '';
+        document.getElementById('result1').textContent = 'Result: ';
+        document.getElementById('result2').textContent = 'Result: ';
+        document.getElementById('result3').textContent = 'Result: ';
+        document.getElementById('result5').textContent = 'Result: ';
+        document.getElementById('result6').textContent = 'Result: ';
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

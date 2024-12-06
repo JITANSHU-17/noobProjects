@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Support</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init(
+                {
+                    publicKey: "D1iTG5nPxr8oKGM6z",
+                });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            document.getElementById("supportForm").addEventListener('submit',function (event) {
+                event.preventDefault();
+                const sid='service_egon7mf';
+                const tid='template_l3et3ae';
+                emailjs.sendForm(sid,tid,this)
+                .then(()=>{
+                    alert("Message sent to support team!");
+                    console.log('SUCCESS!');
+                }, (error) =>
+                {
+                    alert('Failed',error);
+                    console.log('Failed...',error);
+                });
+            });
+        }
+    </script>
+    <style>
+      body
+      {
+        background-image: url('images/bgg1.jpg');
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Support</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="BMI.html">BMI</a></li>
+        <li><a href="converter.html">Converter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="contact-form">
+      <h2>Get in Touch</h2>
+      <form id="supportForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="from_name" placeholder="Your Email" required />
+        <textarea rows="10" cols="50" id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <button onclick="clearFields()">Clear</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <h3>Contact at:</h3>
+    <br>
+    <p>Email:cst.23bcte30@silicon.ac.in</p>
+    <br>
+    <p >Linkedin: <a href="http://in.linkedin.com/in/jitanshu-patra-2308902ab">Jitanshu Patra</a></p>
+    <p>&copy; 2024 Utility Website</p>
+  </footer>
+
+  <script>
+    function clearFields() {
+       document.getElementById('name').value = '';
+       document.getElementById('email').value = '';
+       document.getElementById('message').value = '';
+       document.getElementById('name').textContent = '';
+       document.getElementById('email').textContent = '';
+       document.getElementById('message').textContent = '';
+   }
+ </script>
+</body>
+</html>
