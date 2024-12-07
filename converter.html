@@ -4,25 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit Converter</title>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="try.css">
   <style>
     body
-    {
-      background-image: url('bgg1.jpg');
-    }
+{
+    min-height: 100vh;
+    background-image: url('bgg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
   </style>
 </head>
 <body>
   <header>
-    <h1>Unit Converter</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-        <li><a href="BMI.html">BMI</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="Tic-Tac.html">Tic-Tac</a></li>
+      <li><a href="BMI.html">BMI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <ul>
+      <li><a href="#">Unit Converter</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="calculator.html">Calculator</a></li>
+      <li class="hideOnMobile"><a href="Tic-Tac.html">Tic-Tac</a></li>
+      <li class="hideOnMobile"><a href="BMI.html">BMI</a></li>
+      <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+      <li class="menu" onclick=ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -950 950 950" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+  </ul>
+  </nav>
   </header>
 
   <main>
@@ -86,7 +102,17 @@
         document.getElementById('result5').textContent = 'Result: ';
         document.getElementById('result6').textContent = 'Result: ';
     }
+    function ShowSidebar()
+        {
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar()
+        {
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
   </script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
