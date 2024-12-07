@@ -208,7 +208,7 @@ main {
      border-radius: 4px;
      margin: 10px 0;
      color: white;
-     background: lightcyan; 
+     background: transparent; 
    }
    #contact-form textarea 
    {
@@ -218,7 +218,7 @@ main {
      padding: 10px; 
      font-size: 16px; 
      color: white;
-     background: lightcyan; 
+     background: transparent; 
    }
    #contact-form input:focus,#contact-form textarea:focus
    {
@@ -270,7 +270,7 @@ section {
 
 .game--status {
     font-size: 50px;
-    color: black;
+    color: white;
     margin: 20px auto;
 }
 
