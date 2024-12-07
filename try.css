@@ -81,6 +81,7 @@ main {
     color: white;
     text-decoration: indigo;
     padding: 20px;
+    position:auto;
   }
   
   footer {
