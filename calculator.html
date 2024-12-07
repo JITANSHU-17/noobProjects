@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="try.css">
+  <style>
+     body
+{
+    min-height: 100vh;
+    background-image: url('bgg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="converter.html">Converter</a></li>
+        <li><a href="Tic-Tac.html">Tic-Tac</a></li>
+        <li><a href="BMI.html">BMI</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  
+    <ul>
+        <li><a href="#">Calculator</a></li>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="converter.html">Converter</a></li>
+        <li class="hideOnMobile"><a href="Tic-Tac.html">Tic-Tac</a></li>
+        <li class="hideOnMobile"><a href="BMI.html">BMI</a></li>
+        <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+        <li class="menu" onclick=ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -950 950 950" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="calculator">
+      <input type="text" id="display" disabled/>
+      <div id="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="calculateResult()" class="res">=</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Utility Website</p>
+  </footer>
+
+  <script>
+     function ShowSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+    function hideSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    background-color: black;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height:  50px;   
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:white;
+}
+nav a:hover
+{
+    background-color: rgb(61, 60, 60);
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 259px;
+    z-index: 999;
+    background-color: rgba(255,255,255,0,2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu
+{
+    display: none;
+}
+@media(max-width:800px)
+{
+    .hideOnMobile
+    {
+        display: none;
+    }
+    .menu
+    {
+        display:block;
+    }
+}
+@media(max-width:400px)
+{
+    .sidebar
+    {
+        width: 100%;
+    }
+}
+main {
+    color: white;
+    text-decoration: indigo;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  footer p a{
+    color: white;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: color 0.5s ease-in-out;
+  }
+  footer p a:hover
+  {
+    background-color:black;
+  }
+  input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .range {
+    margin-top: 20px;
+    font-size: 16px;
+    color:white;
+  }
+ /* Calculator */
+ #calculator {
+    /* border: 3px solid rgb(55, 52, 52); 
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     */
+     color: ghostwhite;
+     max-width: 400px;
+     margin: 0 auto;
+   }
+   
+   #display {
+     border: 3px solid rgb(55, 52, 52); 
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     width: 100%;
+     border-radius: 4px;
+     font-size: 2rem;
+     text-align: left;
+   }
+   
+   #buttons button {
+     color: rgb(51, 48, 48);
+     text-decoration: indigo;
+     border-radius: 8px;
+     font-size: 1.5rem;
+     width: 20%;
+     margin: 5px;
+     cursor: pointer;
+     color: white;
+     background: transparent;
+   }
+   #buttons button.res {
+     color: rgb(51, 48, 48);
+     text-decoration: indigo;
+     padding: 8px 180px;
+     font-size: 1.5rem;
+     max-width: 400px;
+     margin: 5px;
+     cursor: pointer;
+     color: white;
+     background: transparent;
+   }
+   
+   #buttons button:hover {
+     background-color:silver;
+   }
+   
+   /* Unit Converter */
+   #converter
+   {
+     padding:0 5px;
+   }
+   #converter input {
+     color: rgb(32, 31, 31);
+     text-decoration: indigo;
+     padding: 1px;
+     font-size: 1.2rem;
+     width: 50%;
+     margin-right: 10px;
+     color: white;
+     background: transparent;
+   }
+   
+   #converter button {
+     color: rgb(42, 40, 40);
+     text-decoration: indigo;
+     border-radius: 4px;
+     font-size: 1.1rem;
+     cursor: pointer;
+     color: white;
+     background: transparent;
+   }
+   #converter button:hover
+   {
+     background-color: silver;
+   }
+   
+   #contact-form input{
+     width: 100%;
+     border-radius: 4px;
+     margin: 10px 0;
+     color: white;
+     background: lightcyan; 
+   }
+   #contact-form textarea 
+   {
+     width: 100%; 
+     max-width: 600px; 
+     height: 200px;
+     padding: 10px; 
+     font-size: 16px; 
+     color: white;
+     background: lightcyan; 
+   }
+   #contact-form input:focus,#contact-form textarea:focus
+   {
+     border-color: rgb(220, 224, 228);
+   }
+   
+   #contact-form button {
+     color: rgb(41, 39, 39);
+     text-decoration: indigo;
+     border-radius: 8px;
+     font-size: 1.2rem;
+     cursor: pointer;
+   }
+   #contact-form button:hover
+   {
+     background-color:silver;
+   }
+
+section {
+    text-align: center;
+}
+
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 2px 2px #6f6f6f;
+    border: 2px solid #0c0c0c;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+
+.game--title {
+    font-size: 100px;
+    color: #ededeb;
+    margin: 10px auto;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 10px auto;
+    background-color: #9d9fa1;
+    background: transparent;
+    color: white;
+}
+
+.game--status {
+    font-size: 50px;
+    color: #fffefd;
+    margin: 20px auto;
+}
+
+.game--restart {
+    background:transparent;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: #f5f6f7;
+    box-shadow: 2px 2px 2px 2px #7a7876;
+    border: 2px solid #0f0f0f;
+}
+.game--restart:hover
+{
+    background-color: rgb(75, 74, 74);
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="try.css">
+        <style>
+            body
+      {
+          min-height: 100vh;
+          background-image: url('bgg1.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+          </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="converter.html">Converter</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="BMI.html">BMI</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        
+                <ul>
+                    <li><a href="#">Tic-Tac Game</a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="converter.html">Converter</a></li>
+                    <li class="hideOnMobile"><a href="calculator.html">Calculator</a></li>
+                    <li class="hideOnMobile"><a href="BMI.html">BMI</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="menu" onclick=ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -950 950 950" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+          </header>
+        <section>
+            <h1 class="game--title">Tic-Tac-Toe</h1>
+            <div class="game--container">
+                <div data-cell-index="0" class="cell"></div>
+                <div data-cell-index="1" class="cell"></div>
+                <div data-cell-index="2" class="cell"></div>
+                <div data-cell-index="3" class="cell"></div>
+                <div data-cell-index="4" class="cell"></div>
+                <div data-cell-index="5" class="cell"></div>
+                <div data-cell-index="6" class="cell"></div>
+                <div data-cell-index="7" class="cell"></div>
+                <div data-cell-index="8" class="cell"></div>
+            </div>
+            <h2 class="game--status"></h2>
+            <button class="game--restart">Restart Game</button>
+        </section>
+         
+<footer>
+    <p>&copy; 2024 Utility Website <br>BY Gen.pvt</p>
+  </footer>
+  <script>
+    function ShowSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+    function hideSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+
+</script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="try.css"> 
+  <style>
+    body
+{
+    min-height: 100vh;
+    background-image: url('bgg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+          <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="Tic-Tac.html">Tic-Tac</a></li>
+            <li><a href="converter.html">Converter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#">BMI</a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="calculator.html">Calculator</a></li>
+            <li class="hideOnMobile"><a href="Tic-Tac.html">Tic-Tac</a></li>
+            <li class="hideOnMobile"><a href="converter.html">Converter</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="menu" onclick=ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -950 950 950" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+          </ul>
+        </nav>
+      </header>
+<main>
+    <div id="BMI">
+        <h1>BMI Calculator</h1>
+        <p>Enter your weight (in kilograms) and height (in meters) to calculate your BMI.</p>
+        <input type="number" id="weight" placeholder="Weight (kg)" step="0.1" required>
+        <input type="number" id="height" placeholder="Height (m)" step="0.01" required>
+        <button type="submit" onclick="calculateBMI()">Calculate BMI</button>
+        <button onclick="clearFields()">Clear</button>
+
+        <div class="result" id="bmiResult">Your BMI: </div>
+        <div class="range" id="bmiRange"></div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Utility Website <br>BY Gen.pvt</p>
+</footer>
+
+  <script>
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const bmiResult = document.getElementById('bmiResult');
+      const bmiRange = document.getElementById('bmiRange');
+
+
+      // Validate inputs
+      if (!weight || !height || weight <= 0 || height <= 0) {
+        bmiResult.textContent = 'Please enter valid weight and height values.';
+        bmiRange.textContent = '';
+        return;
+      }
+
+      // Calculate BMI
+      const bmi = (weight / (height * height)).toFixed(2);
+
+      // Determine BMI category
+      let range = '';
+      if (bmi < 18.5) {
+        range = 'Underweight (BMI < 18.5)';
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        range = 'Normal weight (BMI 18.5 - 24.9)';
+      } else if (bmi >= 25 && bmi < 29.9) {
+        range = 'Overweight (BMI 25 - 29.9)';
+      } else {
+        range = 'Obesity (BMI ≥ 30)';
+      }
+
+      // Display results
+      bmiResult.textContent = `Your BMI: ${bmi}`;
+      bmiRange.textContent = `Category: ${range}`;
+    }
+    function clearFields() {
+        document.getElementById('weight').value = '';
+        document.getElementById('height').value = '';
+        document.getElementById('bmiResult').textContent = 'Your BMI: ';
+        document.getElementById('bmiRange').textContent = '';
+    }
+    function ShowSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+    function hideSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+
+</script>
+</body>
+</html>
